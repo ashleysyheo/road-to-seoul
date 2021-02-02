@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    /* font-family: 'SFProText', Arial, Helvetica, sans-serif; */
+    font-size: 1.8rem;
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background: rgb(255,190,88);
+    background: linear-gradient(0deg, rgba(255,190,88,1) 0%, rgba(52,187,255,1) 100%);
+    /* animation: fadeOut .5s 9s ease-out forwards; */
+    pointer-events: none;
+    background-size: 400% 400%;
+    animation: AnimationName 9s ease 1s forwards, fadeOut .5s ease-out 9s forwards;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes AnimationName {
+    from {background-position:50% 0%}
+    to {background-position:51% 100%}
+}
